@@ -7,4 +7,4 @@ Dette er min Changelog
 
 ## [0.0.1] - 2018-11-21
 ### Added
-- Har lige lavet min Changelog
+- Har lige lavet min Changeloget
