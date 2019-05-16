@@ -1,0 +1,32 @@
+<% include admin_partials/head.ejs %>
+
+<div id="wrapper">
+    <% include admin_partials/after-header.ejs %>
+
+    <main class="admin_main">
+        <h1>Annoncer</h1>
+        <a href="/admin/ads/create"> Opret en ny ting</a>
+        <table>
+            <tbody>
+                <% results.forEach(results => { %>
+                <tr>
+                    <td>
+                        <%= results.ads_title %>
+                    </td>
+                    <td>
+                        <img src="../<%= results.ads_img %>" alt="yes">
+                    </td>
+                    <td>
+                        <a href="/admin/ads/edit/<%= results.id %>" class="update updatebtn">Edit</a>
+                    </td>
+                    <td>
+                        <a href="#!" data-id="<%= results.id %>" class="delete delads">Delete</a>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+    <script src="/script/delete_ads.js"></script>
+    <% include admin_partials/after-footer.ejs %>
+</div>
