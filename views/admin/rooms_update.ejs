@@ -1,0 +1,26 @@
+<% include admin_partials/head.ejs %>
+<div id="wrapper">
+    <% include admin_partials/after-header.ejs %>
+    <main>
+        <h1 class="h2">Rediger lokale</h1>
+        <form id="edit_rooms" enctype="multipart/form-data">
+            <input type="hidden" value="<%= results.id%>" name="id">
+
+            <label for="inputnavn">ny title</label>
+            <input name="room_name" value="<%= results.room_name %>" type="text" class="form-control"
+                placeholder="Ny title" autofocus>
+            <label for="inputnavn">Image</label>
+            <input name="room_img" value="<%= results.room_img %>" type="file" class="form-control"
+                placeholder="Nyt billede" autofocus>
+
+
+            <label for="inputnavn">Pris</label>
+            <input name="room_price" value="<%= results.room_price %>" type="text" class="form-control"
+                placeholder="Ny pris" autofocus>
+            <button>gem</button>
+            <p>&copy; 2018-2019</p>
+        </form>
+    </main>
+    <script src="/script/update_rooms.js"></script>
+    <% include admin_partials/after-footer.ejs %>
+</div>

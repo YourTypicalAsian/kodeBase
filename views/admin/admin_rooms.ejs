@@ -1,0 +1,35 @@
+<% include admin_partials/head.ejs %>
+
+<div id="wrapper">
+    <% include admin_partials/after-header.ejs %>
+
+    <main class="admin_main">
+        <h1>Lokaler</h1>
+        <a href="/admin/rooms/create"> Opret en ny ting</a>
+        <table>
+            <tbody>
+                <% results.forEach(results => { %>
+                <tr>
+                    <td>
+                        <%= results.room_name %>
+                    </td>
+                    <td>
+                        <img src="../<%= results.room_img %>" alt="yes">
+                    </td>
+                    <td>
+                        <%= results.room_price %>
+                    </td>
+                    <td>
+                        <a href="/admin/rooms/edit/<%= results.id %>" class="update updatebtn">Edit</a>
+                    </td>
+                    <td>
+                        <a href="#!" data-id="<%= results.id %>" class="delete delrooms">Delete</a>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+    <script src="/script/delete_rooms.js"></script>
+    <% include admin_partials/after-footer.ejs %>
+</div>

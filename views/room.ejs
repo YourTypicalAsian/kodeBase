@@ -1,0 +1,33 @@
+<% include partials/head.ejs %>
+<% include partials/after-header.ejs %>
+<div id="mini_wrapper">
+    <main class="room">
+        <div class="lokale">
+            <h1><%= results.room_name %></h1>
+            <img src="../<%=results.room_img %>" alt="yes">
+
+
+            <h1>Book lokalet</h1>
+            <form action="/room/reciept/<%=results.id %>" method="POST" enctype="multipart/form-data">
+                <label for="inputnavn" class="sr-only">Navn</label>
+                <input name="user_name" type="text" id="inputEmail" class="form-control" autofocus>
+    
+                <label for="inputnavn" class="sr-only">Telefon nummer</label>
+                <input name="user_phone" type="number" id="inputEmail" class="form-control" autofocus>
+                
+                <p>Leje pris <%= results.room_price %> DKK</p>
+                <button type="submit">Book</button>
+                <p>&copy; 2018-2019</p>
+            </form>
+        </div>
+    </main>
+</div>
+<% include partials/after-footer.ejs %>
+
+<!-- <form action="/room/reciept/<%=results.id %>" method="POST">
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_6GIj1SNC8TQJgQ47cSJWPpZt00VuMXs9Xc" data-amount="<%= results.room_price %>" data-name="<%= results.room_name %>"
+                        data-image="../<%=results.room_img %>" data-locale="auto"
+                        data-currency="dkk">
+                    </script>
+                </form> -->

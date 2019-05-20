@@ -1,0 +1,23 @@
+<% include partials/head.ejs %>
+<% include partials/after-header.ejs %>
+
+<form action="/auth/signup" method="POST">
+    <div class="inputGroup">
+        <label>
+            Brugernavn
+            <input type="text" name="username" value="<%= (typeof username != 'undefined') ? username : '' %>">
+        </label>
+    </div>
+    <div class="inputGroup">
+        <label>
+            Adgangskode
+            <input type="password" name="password" value="<%= (typeof password != 'undefined') ? password : ''%>">
+        </label>
+    </div>
+    <p>
+        <%= (typeof errorMessage != 'undefined') ? errorMessage : '' %>
+    </p>
+    <button type="submit">opret konto</button>
+</form>
+
+<% include partials/after-footer.ejs %>

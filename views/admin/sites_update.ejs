@@ -1,0 +1,22 @@
+<% include admin_partials/head.ejs %>
+<div id="wrapper">
+    <% include admin_partials/after-header.ejs %>
+    <main>
+        <h1 class="h2">Rediger Forsiden</h1>
+        <form id="edit_sites">
+            <label for="inputnavn">ny title</label>
+            <input name="title" value="<%= results.title %>" type="text" class="form-control" placeholder="Ny title"
+                autofocus>
+            <label for="inputnavn" >beskrivelse</label>
+            <input name="img" value="<%= results.img %>" type="file" class="form-control" placeholder="Nyt billede"
+                autofocus>
+            <label for="inputnavn">beskrivelse</label>
+            <input name="text" value="<%=results.text %>" type="text" class="form-control" placeholder="Ny text"
+                autofocus>
+            <button type="submit">gem</button>
+            <p>&copy; 2018-2019</p>
+        </form>
+    </main>
+    <script src="/script/update_site.js"></script>
+    <% include admin_partials/after-footer.ejs %>
+</div>

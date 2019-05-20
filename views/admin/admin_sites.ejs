@@ -1,0 +1,37 @@
+<% include admin_partials/head.ejs %>
+
+<div id="wrapper">
+    <% include admin_partials/after-header.ejs %>
+
+    <main class="admin_main">
+        <h1>Forsiden</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Overskrift</th>
+                    <th>Billede</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(results => { %>
+                <tr>
+                    
+                    <a href="/admin/sites/edit" class="update updatebtn"><span>Edit</span></a>
+                    <td>
+                        <%= results.title %>
+                    </td>
+                    <td>
+                        <img src="../<%= results.img %>" alt="yes">
+                    </td>
+                    <td>
+                        <%=  results.text %>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+
+    <% include admin_partials/after-footer.ejs %>
+</div>
