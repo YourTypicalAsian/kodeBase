@@ -1,0 +1,21 @@
+<% include admin_partials/head.ejs %>
+<div id="wrapper">
+    <% include admin_partials/after-header.ejs %>
+    <main>
+        <h1 class="h2">Rediger annonce</h1>
+        <form id="edit_ads" enctype="multipart/form-data">
+            <input type="hidden" value="<%= results.id%>" name="id">
+
+            <label for="inputnavn">ny title</label>
+            <input name="ads_title" value="<%= results.ads_title %>" type="text" class="form-control" placeholder="Ny title"
+                autofocus>
+            <label for="inputnavn" >Image</label>
+            <input name="ads_img" value="<%= results.ads_img %>" type="file" class="form-control" placeholder="Nyt billede"
+                autofocus>
+            <button>gem</button>
+            <p>&copy; 2018-2019</p>
+        </form>
+    </main>
+    <script src="/script/update_ads.js"></script>
+    <% include admin_partials/after-footer.ejs %>
+</div>

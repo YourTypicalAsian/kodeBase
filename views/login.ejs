@@ -1,0 +1,25 @@
+<% include partials/head.ejs %>
+<% include partials/after-header.ejs %>
+
+<form action="/auth/login" method="POST">
+	<% if (typeof status != 'undefined') { %>
+	<span class="errorMessage">
+		<%= status %></span>
+	<% } %>
+	<div class="inputGroup">
+		<label>
+			Brugernavn
+			<input type="text" name="username">
+		</label>
+	</div>
+	<div class="inputGroup">
+		<label>
+			Adgangskode
+			<input type="password" name="password">
+		</label>
+	</div>
+	<button type="submit">Log ind</button>
+</form>
+
+<a href="/sign-up">Opret en bruger</a>
+<% include partials/after-footer.ejs %>

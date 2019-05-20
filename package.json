@@ -1,0 +1,42 @@
+{
+  "name": "kodebase",
+  "version": "0.0.1",
+  "description": "Det er en kodebase",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.0",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.15.6",
+    "formidable": "^1.2.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.6",
+    "npm": "^6.4.1",
+    "pjson": "^1.0.9",
+    "run-script-os": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node -r dotenv/config server.js dotenv_config_path=./.env",
+    "dev": "run-script-os",
+    "dev:win32": "set DEBUG=kodebase & nodemon -r dotenv/config server.js dotenv_config_path=./.env",
+    "dev:linux": "DEBUG=kodebase nodemon -r dotenv/config server.js dotenv_config_path=./.env",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YourTypicalAsian/kodeBase.git"
+  },
+  "author": "Dann Dani-Boiii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YourTypicalAsian/kodeBase/issues"
+  },
+  "homepage": "https://github.com/YourTypicalAsian/kodeBase#readme"
+}

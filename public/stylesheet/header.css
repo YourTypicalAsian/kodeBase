@@ -1,0 +1,38 @@
+.standard_nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(191, 140, 120);
+    padding: 0.5em;
+}
+
+.standard_nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+.standard_nav a:hover{
+    color: lightpink;
+}
+
+
+/* Admin */
+.admin_nav{
+    height: 100vh;
+    list-style: none;
+    background-color: rgb(117, 117, 117);
+    padding: 0 1em 0 0.7em;
+}
+
+.admin_nav li{
+    padding-top: 1em;
+}
+
+.admin_nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+.admin_nav a:hover{
+    color: lightpink;
+}

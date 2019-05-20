@@ -1,0 +1,29 @@
+<% include partials/head.ejs %>
+<% include partials/after-header.ejs %>
+<div id="mini_wrapper">
+
+
+    <div class="annonce">
+        <h1><%= results.room_name %></h1>
+        <img src="<%= results.room_img %>" alt="yes">
+        <figcaption>Annonce</figcaption>
+        <a href="/room/<%= results.id %>">Book dette lokale</a>
+    </div>
+
+    <main class="forside">
+        <h1><%= main.title %></h1>
+
+        <img src="<%= main.img %>" alt="yes">
+
+        <p><%= main.text %></p>
+    </main>
+
+    <div class="annonce">
+        <h1><%= results.room_name %></h1>
+        <img src="<%= results.room_img %>" alt="yes">
+        <figcaption>Annonce</figcaption>
+        <a href="/room/<%= results.id %>">Book dette lokale</a>
+    </div>
+
+</div>
+<% include partials/after-footer.ejs %>
