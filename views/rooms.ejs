@@ -2,6 +2,7 @@
 <% include partials/after-header.ejs %>
 <div id="mini_wrapper">
     <main class="rooms">
+
         <div class="searchinput">
             <form action="/rooms/soeg" method="GET">
                 <h1>Søg</h1>
@@ -16,6 +17,14 @@
             <img src="<%= results.room_img %>" alt="yes">
             <a href="/room/<%= results.id %>">Book dette lokale</a>
         </div>
+
+        <% results.forEach(results => { %>
+            <div class="lokaler">
+                <h1><%= results.room_name %></h1>
+                <img src="<%= results.room_img %>" alt="yes">
+                <a href="/room/<%= results.id %>">Book dette lokale</a>
+            </div>
+
         <% }); %>
     </main>
 

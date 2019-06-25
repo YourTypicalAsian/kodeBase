@@ -22,6 +22,7 @@ module.exports = function (app) {
         })
     })
 
+
     app.get('/room/:id', function (req, res) {
         db.query(`SELECT * FROM rooms WHERE id = ?`, [req.params.id], function (err, results) {
             if (err) throw err;
@@ -41,7 +42,11 @@ module.exports = function (app) {
     });
 
     app.post('/room/reciept/:id', function (req, res, next) {
+
         db.query(`INSERT INTO booking (user_name, user_phone, room_id) VALUES (?, ?, ?);`, [req.fields.user_name, req.fields.user_phone, req.params.id], function (err, results) {
+
+        db.query(`INSERT INTO booking (user_name, user_phone, room_id) VALUES (?, ?, ?, ?);`, [req.fields.user_name, req.fields.user_phone, req.params.id], function (err, results) {
+
             if (err) throw err;
             db.query('SELECT * FROM rooms WHERE id = ?', [req.params.id], function (err, results) {
                 if (err) throw err;
@@ -54,5 +59,6 @@ module.exports = function (app) {
                 });
             });
         })
+    })
     })
 }

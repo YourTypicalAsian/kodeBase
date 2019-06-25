@@ -3,7 +3,10 @@
     <% include admin_partials/after-header.ejs %>
     <main>
         
+
         <form action="/admin/rooms/create" method="POST" enctype="multipart/form-data">
+        <form class="form-signinx" action="/admin/rooms/create" method="POST" enctype="multipart/form-data">
+
             <label for="inputnavn" class="sr-only">Lokale navn</label>
             <input name="room_name" type="text" id="inputEmail" class="form-control" autofocus>
 
