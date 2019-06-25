@@ -1,0 +1,7 @@
+#wrapper{
+    display: flex;
+}
+
+.admin_main img{
+    width: 40em;
+}

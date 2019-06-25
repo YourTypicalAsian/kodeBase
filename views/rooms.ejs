@@ -1,0 +1,23 @@
+<% include partials/head.ejs %>
+<% include partials/after-header.ejs %>
+<div id="mini_wrapper">
+    <main class="rooms">
+        <div class="searchinput">
+            <form action="/rooms/soeg" method="GET">
+                <h1>Søg</h1>
+                <label for="searchword"></label>
+                <input type="search" name="searchword" id="searchword">
+                <button type="submit">Søg</button>
+            </form>
+        </div>
+        <% results.forEach(results => { %>
+        <div class="lokaler">
+            <h1><%= results.room_name %></h1>
+            <img src="<%= results.room_img %>" alt="yes">
+            <a href="/room/<%= results.id %>">Book dette lokale</a>
+        </div>
+        <% }); %>
+    </main>
+
+</div>
+<% include partials/after-footer.ejs %>

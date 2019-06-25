@@ -1,0 +1,18 @@
+<% include admin_partials/head.ejs %>
+<div id="wrapper">
+    <% include admin_partials/after-header.ejs %>
+    <main>
+        
+        <form class="form-signinx" action="/admin/ads/create" method="POST" enctype="multipart/form-data">
+            <label for="inputnavn" class="sr-only">annonce navn</label>
+            <input name="ads_title" type="text" id="inputEmail" class="form-control" autofocus>
+
+            <label for="inputnavn" class="sr-only">annonce img</label>
+            <input name="ads_img" type="file" id="inputEmail" class="form-control" autofocus>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">gem</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+        </form>
+    </main>
+    <% include admin_partials/after-footer.ejs %>
+</div>
